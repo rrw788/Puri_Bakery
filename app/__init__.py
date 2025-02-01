@@ -1,7 +1,7 @@
 from flask import Flask
-from app.config import Config
-from app.extensions import db, migrate
-from app.routes.routes import routes
+from .config import Config  # Gunakan relative import
+from .extensions import db, migrate
+from .routes.routes import routes
 
 def create_app():
     app = Flask(__name__, static_folder="static")
