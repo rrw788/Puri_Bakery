@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puri Bakery</title>
+
+    <!-- Link Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Link Icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- Link CSS Kustom -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='cart.css') }}" />
+
+    <i class="fas fa-bars" id="menu-bar"></i>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logoContent">
+        <a href="#" class="logo">
+          <img src="{{ url_for('static', filename='images/logopuri.png') }}" alt="Logo Puri Bakery" />
+        </a>
+        <h1 class="logoName">Puri Bakery</h1>
+      </div>
+
+      <nav class="navbar">
+        <a href="{{ url_for('routes.home') }}">Home</a>
+        <a href="{{ url_for('routes.home') }}#blogs">Category</a>
+        <a href="{{ url_for('routes.home') }}#product">Product</a>
+        <a href="{{ url_for('routes.home') }}#contact">Contact</a>
+      </nav>
+      <div class="icon">
+        <i class="fas fa-bars" id="menu-bar"></i>
+      </div>
+    </header>
+
+    <!-- Keranjang Belanja -->
+    <div class="cart-page">
+      <h2>Keranjang Belanja</h2>
+      <p><span class="cart-count">0</span> items dalam keranjang</p>
+
+      <div class="cart-items">
+        <!-- Produk akan ditambahkan secara dinamis melalui JavaScript -->
+      </div>
+
+      <div class="summary">
+        <h3>Ringkasan Pesanan</h3>
+        <p>Subtotal: <span class="subtotal">Rp0</span></p>
+        <p>Biaya Layanan: <span class="service-fee">Rp10.000</span></p>
+        <p>Total: <span class="total">Rp0</span></p>
+    
+        <!-- Form Checkout dengan tata letak lebih rapi -->
+        <h3>Form Checkout</h3>
+        <form class="checkout-form">
+            <div class="form-group">
+                <label for="customer-name">Nama:</label>
+                <input type="text" id="customer-name" placeholder="Masukkan nama Anda" required />
+            </div>
+            <div class="form-group">
+                <label for="customer-phone">Nomor WhatsApp:</label>
+                <input type="text" id="customer-phone" placeholder="Masukkan nomor WhatsApp Anda" required />
+            </div>
+            <div class="form-group">
+                <label for="customer-address">Alamat:</label>
+                <textarea id="customer-address" placeholder="Masukkan alamat Anda" required></textarea>
+            </div>
+            <button class="checkout">Checkout</button>
+        </form>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-whatsapp"></a>
+        <a href="https://www.instagram.com/puriibakery?igsh=Mmt2aTllNWJ6YTRm" target="_blank" class="fab fa-instagram"></a>
+      </div>
+      <div class="credit">
+        <span> 2025 Puri Bakery. All Rights Reserved.</span>
+      </div>
+    </footer>
+
+    <!-- Link Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- File JavaScript Kustom -->
+    <script src="{{ url_for('static', filename='scripts/cart.js') }}"></script>
+  </body>
+</html>

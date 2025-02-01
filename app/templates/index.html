@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puri Bakery</title>
+
+    <!-- swiper link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- cdn icon link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- custom css file  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+
+  <body>
+    <!-- header section start here  -->
+    <header class="header">
+      <div class="logoContent">
+        <a href="#" class="logo"><img src="{{ url_for('static', filename='images/logopuri.png') }}" alt="" /></a>
+        <h1 class="logoName">Puri Bakery</h1>
+      </div>
+
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#blogs">Category</a>
+        <a href="#product">product</a>
+        <a href="#contact">contact</a>
+      </nav>
+
+      <div class="icon">
+        <i class="fas fa-search" id="search"></i>
+        <a href="{{ url_for('routes.cart') }}">
+          <i class="fas fa-shopping-cart"><span id="cart-count">0</span></i>
+        </a>
+        <i class="fas fa-bars" id="menu-bar"></i>
+      </div>
+
+      <div class="search">
+        <input type="search" placeholder="search..." />
+      </div>
+    </header>
+    <!-- header section end here  -->
+
+    <!-- home section start here  -->
+    <section class="home" id="home">
+      <div class="homeContent">
+        <h2>Delicious Cake for Everyone</h2>
+        <p>Ciptakan momen manis dengan produk homemade kami! Nikmati cake, brownies, dan cookies yang dibuat dengan bahan berkualitas dan penuh rasa. Coba sekarang dan rasakan kenikmatannya! 😋</p>
+        <div class="home-btn">
+          <a href="#product"><button>see more</button></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- home section end here  -->
+
+    <!-- blogs section start here  -->
+    <section class="blogs" id="blogs">
+      <div class="heading">
+        <h2>Category Product</h2>
+      </div>
+      <div class="swiper blogs-row">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/categorycake.png') }}" alt="" />
+            </div>
+            <div class="content">
+              <h3>Cake</h3>
+              <p>
+                "Category Cake menghadirkan berbagai pilihan bolu istimewa yang cocok untuk segala momen. Mulai dari Bolu Jadul dengan rasa klasik yang otentik, Bolu Ketan dengan tekstur lembut, Bolu Marmer dengan pola khas yang menggoda,
+                hingga Bolu Gulung yang kaya rasa. Tak ketinggalan, tersedia juga Bolu Ulang Tahun yang spesial untuk perayaanmu dan Brownies dengan cita rasa cokelat yang intens dan tekstur moist. Semua dibuat homemade dengan bahan
+                berkualitas untuk memberikan pengalaman rasa yang tak terlupakan."
+              </p>
+              <a href="#blogs" class="btn">SEE MORE</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/categoryroti.png') }}" alt="" />
+            </div>
+            <div class="content">
+              <h3>Donuts & Breads</h3>
+              <p>
+                "Category Breads menghadirkan berbagai pilihan camilan renyah yang cocok untuk menemani setiap momen. Dari cookies klasik yang kaya rasa, hingga varian kreatif dengan tambahan cokelat, kacang, atau topping spesial lainnya.
+                Setiap cookies dibuat dengan bahan berkualitas dan proses homemade yang memastikan rasa nikmat di setiap gigitan. Cocok untuk hadiah, suguhan tamu, atau sekadar camilan santai di rumah."
+              </p>
+              <a href="#blogs" class="btn">SEE MORE</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/categorysnackbox.png') }}" alt="" />
+            </div>
+            <div class="content">
+              <h3>Traditional Snack</h3>
+              <p>
+                "Category Traditional Snack menyajikan aneka camilan khas tradisional yang kaya akan rasa dan kenangan. Dibuat dengan resep autentik dan bahan pilihan, setiap camilan membawa cita rasa lokal yang unik. Cocok untuk menemani
+                waktu santai, acara keluarga, atau sebagai hantaran istimewa. Nikmati kelezatan tradisional yang tak lekang oleh waktu."
+              </p>
+              <a href="#blogs" class="btn">SEE MORE</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- product section start here  -->
+    <section class="product" id="product">
+      <div class="heading">
+        <h2>Our Exclusive Products</h2>
+      </div>
+      <div class="swiper product-row">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/bolujaduloriginal.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Bolu Jadul Original</h3>
+              <p class="price">Rp 50.000</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/bolujadulpandan.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Bolu Jadul Pandan</h3>
+              <p class="price">Rp 55.000</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/bolujadulmesesleci.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Bolu Jadul Meses Leci</h3>
+              <p class="price">Rp 65.000</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/bolujadulmarmer.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Bolu Jadul Marmer</h3>
+              <p class="price">Rp 55.000</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/bolujadulcoklat.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Bolu Jadul Coklat</h3>
+              <p class="price">Rp 55.000</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/bolujadulkeju.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Bolu Jadul Keju</h3>
+              <p class="price">Rp 65.000</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/bolugulung.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Bolu Gulung Meses</h3>
+              <p class="price">Rp 45.000</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/boluketan.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Bolu Ketan</h3>
+              <p class="price">Rp 55.000</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/blackforest.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Black Forest</h3>
+              <p class="price">PRE ORDER</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/ultah1.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Kue Ulang Tahun 1</h3>
+              <p class="price">PRE ORDER</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/ultah2.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Kue Ulang Tahun 2</h3>
+              <p class="price">PRE ORDER</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="swiper product-row">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/rotiabon.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Roti Abon</h3>
+              <p class="price">Rp 6.500</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/rotipizza.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Roti Pizza</h3>
+              <p class="price">Rp 6.500</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/roticoklat.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Roti Coklat</h3>
+              <p class="price">Rp 6.500</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/bomboloni.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Bomboloni</h3>
+              <p class="price">Rp 4.000</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/donat.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Donat Glaze Topping</h3>
+              <p class="price">Rp 5.000</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="img">
+              <img src="{{ url_for('static', filename='images/paket snackbox.png') }}" alt="" />
+            </div>
+            <div class="product-content">
+              <h3>Snack Box</h3>
+              <p class="price">PRE ORDER</p>
+              <div class="orderNow">
+                <button class="add-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+    <!-- product section end here  -->
+
+    <!-- footer section start here  -->
+    <footer class="footer" id="contact">
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-whatsapp"></a>
+        <a href="https://www.instagram.com/puriibakery?igsh=Mmt2aTllNWJ6YTRm" target="_blank" class="fab fa-instagram"></a>
+      </div>
+      <div class="credit">
+        <span>© 2025 Puri Bakery. All Rights Reserved.</span>
+      </div>
+    </footer>
+
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file  -->
+    <script src="{{ url_for('static', filename='scripts/index.js') }}"></script>
+  </body>
+</html>
